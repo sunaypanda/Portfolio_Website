@@ -8,6 +8,7 @@ import {
   nlp_classifier,
   food_classifier,
   github_project,
+  portfolio_img,
 } from "./image_import.js";
 
 function App() {
@@ -230,7 +231,7 @@ function App() {
               </div>
               <img
                 src={movie_website}
-                alt="Project_4_img"
+                alt="Project_5_img"
                 style={{ width: "250px", height: "165px" }}
               ></img>
               <h3>Movie Search Website</h3>
@@ -253,12 +254,28 @@ function App() {
                 <div className="status-complete"></div>
                 <p style={{ fontSize: "10px" }}>Completed</p>
               </div>
+              <img
+                src={portfolio_img}
+                alt="Project_6_img"
+                style={{ width: "250px", height: "165px" }}
+              ></img>
               <h3>Portfolio Website</h3>
               <p>
                 A React Application built using JS, HTML and CSS, to create a
                 portfolio displaying my skills, and projects that I am currently
                 working on and have completed.
               </p>
+              <a
+                href="https://github.com/sunaypanda/Portfolio_Website"
+                target="blank"
+              >
+                <img
+                  src={github_project}
+                  alt="Portfolio_Github"
+                  style={{ width: "35px", height: "35px", paddingTop: "5px" }}
+                  className="github_link"
+                ></img>
+              </a>
             </div>
             {/* More project cards */}
           </div>

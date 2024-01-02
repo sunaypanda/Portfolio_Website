@@ -3,6 +3,7 @@ import movie_website from "./images/movie_website.png";
 import nlp_classifier from "./images/nlp_image.png";
 import food_classifier from "./images/food_img.png";
 import github_project from "./images/github_logo_project.png";
+import portfolio_img from "./images/portfolio_website.png";
 
 export {
   bitcoin_predict,
@@ -10,4 +11,5 @@ export {
   nlp_classifier,
   food_classifier,
   github_project,
+  portfolio_img,
 };

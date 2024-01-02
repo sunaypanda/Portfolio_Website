@@ -74,7 +74,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 85vh;
+  height: 80vh;
 }
 
 .about_content h1{
@@ -108,7 +108,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 90vh;
+  height: 80vh;
   flex-direction: column;
 }
 
@@ -155,12 +155,15 @@ body {
 }
 
 .projects {
-
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 135vh;
+  height: auto;
+}
+
+.project_content{
+  padding-top: 7rem;
 }
 
 .project_content h2{
@@ -178,8 +181,8 @@ body {
 }
 
 .project_card {
-  background-color: #536079;
-  color: #ecf0f1;
+  background-color: #d2d6dd;
+  color: #202121;
   border-radius: 30px;
   padding: 15px;
   margin: 25px 20px;
@@ -204,6 +207,7 @@ body {
   justify-content: right;
   margin-top: -0.8rem;
   margin-right: 0.5rem;
+  font-weight: 600;
 }
 
 .status-active {
@@ -224,8 +228,7 @@ body {
 }
 
 .project_card:hover {
-  background-color: #e2e6ea;
-  color: #040404;
+  transform: scale(1.05);
 }
 
 
@@ -247,24 +250,27 @@ body {
   transform: scale(1.2);
 }
 
-.Github_Contact:hover{
-  transform: scale(1.2);
-}
 
-.contact h2 {
+
+#contact{
+  align-items: center;
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 5px;
+}
+#contact a{
+  text-decoration: none;
+}
+#contact img{
+  padding: 5px;
+}
+#contact h2 {
   color: #ecf0f1;
 }
-
-.contact a{
-  color:#6387c2;
+#contact img:hover{
+  transform: scale(1.2);
 }
-
-.app-footer {
-  background-color: #ecf0f1;
-  padding: 10px;
-  color: white;
-}
-
 .fade-in {
   opacity: 1;
 }

@@ -2,6 +2,13 @@ import React, { useState, useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { debounce } from "lodash";
 import "./App.css";
+import {
+  bitcoin_predict,
+  movie_website,
+  nlp_classifier,
+  food_classifier,
+  github_project,
+} from "./image_import.js";
 
 function App() {
   const [shouldScrollToTop, setShouldScrollToTop] = useState(true);
@@ -156,10 +163,7 @@ function App() {
                 <div className="status-active"></div>
                 <p>Active</p>
               </div>
-              <img
-                src="https://miro.medium.com/v2/resize:fit:786/format:webp/0*SaNg8uUaKCMQSS5g.jpg"
-                alt="Project_1_img"
-              ></img>
+              <img src={bitcoin_predict} alt="Project_1_img"></img>
               <h3>BitCoin Price Predicton</h3>
               <p>
                 A time series model, trained over a large dataset of stock
@@ -172,11 +176,8 @@ function App() {
                 <div className="status-active"></div>
                 <p>Active</p>
               </div>
-              <img
-                src="https://miro.medium.com/v2/resize:fit:1400/1*goFgCUHprcroxSLZvROjpg.jpeg"
-                alt="Project_2_img"
-              ></img>
-              <h3>NLP Sentence Classifier</h3>
+              <img src={nlp_classifier} alt="Project_2_img"></img>
+              <h3>NLP Sentence Classification</h3>
               <p>
                 A model to classify the different types of sentences in a text
                 and their importance to enable faster skim through using RNN
@@ -184,78 +185,84 @@ function App() {
               </p>
             </div>
             <div className="project_card">
-              <div className="status">
+              <div className="status" style={{ marginBottom: "20px" }}>
                 <div className="status-complete"></div>
-                <p>Completed</p>
+                <p style={{ fontSize: "10px" }}>Completed</p>
               </div>
               <img
-                src="https://miro.medium.com/v2/resize:fit:1400/1*goFgCUHprcroxSLZvROjpg.jpeg"
-                alt="Project_2_img"
+                src={food_classifier}
+                alt="Project_3_img"
+                style={{ width: "250px", height: "165px" }}
               ></img>
-              <h3>Food Classification Model</h3>
+              <h3>Food Image Classification</h3>
               <p>
                 An image classification model to classify various food images to
                 their corresponding labels using a CNN architecture.
               </p>
               <a
-                href="https://github.com/sunaypanda/Food_Classification_Model/blob/25dbf930294d34b0c9df13d70a4fe72e2ccab3a2/Food_Vision_Model_B7.ipynb"
+                href="https://github.com/sunaypanda/Food_Classification_Model"
                 target="blank"
               >
                 <img
-                  src="https://pngimg.com/uploads/github/github_PNG83.png"
+                  src={github_project}
                   alt="Food_Vision_Github"
-                  style={{ width: "40px", height: "40px", paddingTop: "5px" }}
+                  style={{ width: "35px", height: "35px", paddingTop: "5px" }}
                   className="github_link"
                 ></img>
               </a>
             </div>
             <div className="project_card">
-              <div className="status">
+              <div className="status" style={{ marginBottom: "20px" }}>
                 <div className="status-complete"></div>
                 <p style={{ fontSize: "10px" }}>Completed</p>
               </div>
-              <h3>Project 2: Cool Project</h3>
-              <p>Another cool project description...</p>
+              <h3>Finger Counting Model</h3>
+              <p>
+                A real time computer vision model that employs background
+                seperation, hand segmentation and finger counting using convex
+                hull analysis.
+              </p>
             </div>
             <div className="project_card">
-              <div className="status">
+              <div className="status" style={{ marginBottom: "20px" }}>
                 <div className="status-complete"></div>
                 <p style={{ fontSize: "10px" }}>Completed</p>
               </div>
-              <h3>Project 1: Awesome Project</h3>
-              <p>A description of your awesome project...</p>
+              <img
+                src={movie_website}
+                alt="Project_4_img"
+                style={{ width: "250px", height: "165px" }}
+              ></img>
+              <h3>Movie Search Website</h3>
+              <p>
+                A React Application built using JS, HTML and CSS, that pulls
+                search data and displayes movie cards from a real time open
+                movie database.
+              </p>
+              <a href="https://github.com/sunaypanda/Movie-App" target="blank">
+                <img
+                  src={github_project}
+                  alt="Movie_Search_Github"
+                  style={{ width: "35px", height: "35px", paddingTop: "5px" }}
+                  className="github_link"
+                ></img>
+              </a>
             </div>
             <div className="project_card">
-              <div className="status">
+              <div className="status" style={{ marginBottom: "20px" }}>
                 <div className="status-complete"></div>
                 <p style={{ fontSize: "10px" }}>Completed</p>
               </div>
-              <h3>Project 2: Cool Project</h3>
-              <p>Another cool project description...</p>
+              <h3>Portfolio Website</h3>
+              <p>
+                A React Application built using JS, HTML and CSS, to create a
+                portfolio displaying my skills, and projects that I am currently
+                working on and have completed.
+              </p>
             </div>
-            {/* Add more project cards */}
+            {/* More project cards */}
           </div>
         </div>
-      </section>
-      <section className="contact" id="contact">
-        <h2>Contact</h2>
-        <p>Email : sunaypanda12@gmail.com</p>
-        <a href="https://www.linkedin.com/in/sunay-panda/" target="blank">
-          <img
-            src="https://static-00.iconduck.com/assets.00/linkedin-icon-1024x1024-net2o24e.png"
-            alt="Linkedin_Profile"
-            style={{ width: "40px", height: "40px", paddingTop: "5px" }}
-            className="Linkedin_Contact"
-          ></img>
-        </a>
-        <a href="https://github.com/sunaypanda" target="blank">
-          <img
-            src="https://cdn0.iconfinder.com/data/icons/shift-logotypes/32/Github-512.png"
-            alt="Github_Profile"
-            style={{ width: "40px", height: "40px", paddingTop: "5px" }}
-            className="Github_Contact"
-          ></img>
-        </a>
       </section>
     </div>
   );

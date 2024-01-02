@@ -223,6 +223,17 @@ function App() {
                 seperation, hand segmentation and finger counting using convex
                 hull analysis.
               </p>
+              <a
+                href="https://github.com/sunaypanda/Finger_Count_Model"
+                target="blank"
+              >
+                <img
+                  src={github_project}
+                  alt="Finger_Count_Github"
+                  style={{ width: "35px", height: "35px", paddingTop: "5px" }}
+                  className="github_link"
+                ></img>
+              </a>
             </div>
             <div className="project_card">
               <div className="status" style={{ marginBottom: "20px" }}>

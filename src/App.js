@@ -9,6 +9,7 @@ import {
   food_classifier,
   github_project,
   portfolio_img,
+  finger_conter,
 } from "./image_import.js";
 
 function App() {
@@ -217,6 +218,11 @@ function App() {
                 <div className="status-complete"></div>
                 <p style={{ fontSize: "10px" }}>Completed</p>
               </div>
+              <img
+                src={finger_conter}
+                alt="Project_4_img"
+                style={{ width: "250px", height: "165px" }}
+              ></img>
               <h3>Finger Counting Model</h3>
               <p>
                 A real time computer vision model that employs background

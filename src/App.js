@@ -9,7 +9,7 @@ import {
   food_classifier,
   github_project,
   portfolio_img,
-  finger_conter,
+  finger_counter,
 } from "./image_import.js";
 
 function App() {
@@ -219,7 +219,7 @@ function App() {
                 <p style={{ fontSize: "10px" }}>Completed</p>
               </div>
               <img
-                src={finger_conter}
+                src={finger_counter}
                 alt="Project_4_img"
                 style={{ width: "250px", height: "165px" }}
               ></img>

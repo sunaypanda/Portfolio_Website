@@ -5,6 +5,7 @@ import food_classifier from "./images/food_img.png";
 import github_project from "./images/github_logo_project.png";
 import portfolio_img from "./images/portfolio_website.png";
 import finger_counter from "./images/finger_counter.png";
+import open_link from "./images/open_link.png";
 export {
   bitcoin_predict,
   movie_website,
@@ -13,4 +14,5 @@ export {
   github_project,
   portfolio_img,
   finger_counter,
+  open_link,
 };

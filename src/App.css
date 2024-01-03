@@ -199,6 +199,15 @@ body {
   opacity: 1;
 }
 
+.movie_website_link{
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+
 .github_link:hover{
   transform: scale(1.2);
 }
@@ -321,6 +330,10 @@ body {
     height: auto;
     margin:auto;
 
+  }
+
+  .intro_content{
+    width: 75%;
   }
 
   .skills_container{

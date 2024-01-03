@@ -9,6 +9,7 @@ import {
   github_project,
   portfolio_img,
   finger_counter,
+  open_link,
 } from "./image_import.js";
 
 function App() {
@@ -301,14 +302,35 @@ function App() {
                 search data and displayes movie cards from a real time open
                 movie database.
               </p>
-              <a href="https://github.com/sunaypanda/Movie-App" target="blank">
-                <img
-                  src={github_project}
-                  alt="Movie_Search_Github"
-                  style={{ width: "35px", height: "35px", paddingTop: "5px" }}
-                  className="github_link"
-                ></img>
-              </a>
+              <div className="movie_website_link">
+                <a
+                  href="https://movie-search-sunay.netlify.app/"
+                  target="blank"
+                >
+                  <img
+                    src={open_link}
+                    alt="Movie_Search_Link"
+                    style={{ width: "50px", height: "50px", paddingTop: "5px" }}
+                    className="github_link"
+                  ></img>
+                </a>
+                <a
+                  href="https://github.com/sunaypanda/Movie-App"
+                  target="blank"
+                >
+                  <img
+                    src={github_project}
+                    alt="Movie_Search_Github"
+                    style={{
+                      width: "35px",
+                      height: "35px",
+                      paddingTop: "5px",
+                      marginLeft: "10px",
+                    }}
+                    className="github_link"
+                  ></img>
+                </a>
+              </div>
             </div>
             <div className="project_card">
               <div className="status" style={{ marginBottom: "20px" }}>

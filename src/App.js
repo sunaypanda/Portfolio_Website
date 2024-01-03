@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { Link as ScrollLink } from "react-scroll";
+import React, { useState, useEffect, useMemo } from "react";
 import { debounce } from "lodash";
 import "./App.css";
 import {
@@ -13,15 +12,70 @@ import {
 } from "./image_import.js";
 
 function App() {
-  const [shouldScrollToTop, setShouldScrollToTop] = useState(true);
+  const [mostVisibleSection, setMostVisibleSection] = useState("intro");
+  const sections = useMemo(
+    () => ["intro", "about", "skills", "projects", "contact"],
+    []
+  );
 
   useEffect(() => {
     const handleScroll = debounce(() => {
+      let maxVisibleSection = sections[0];
+
+      sections.forEach((section) => {
+        const element = document.getElementById(section);
+        const rect = element.getBoundingClientRect();
+        const isVisible = Math.min(
+          Math.max(
+            0,
+            (rect.bottom - window.innerHeight / 2) / (window.innerHeight / 2)
+          ),
+          Math.max(
+            0,
+            (window.innerHeight / 2 - rect.top) / (window.innerHeight / 2)
+          )
+        );
+
+        if (isVisible || rect.bottom === 0) {
+          maxVisibleSection = section;
+        }
+
+        const isFooterInView = () => {
+          const footer = document.getElementById("contact");
+          const rect = footer.getBoundingClientRect();
+          return rect.top <= window.innerHeight && rect.bottom >= 0;
+        };
+
+        if (isFooterInView()) {
+          maxVisibleSection = "contact";
+        }
+      });
+
+      setMostVisibleSection(maxVisibleSection);
+
+      console.log("Current section:", maxVisibleSection);
+      console.log("Most visible section:", mostVisibleSection);
+
+      const navbar = document.querySelector(".navbar");
+      const activeClass = "active";
+
+      sections.forEach((section) => {
+        const link = navbar.querySelector(`[href="#${section}"]`);
+        if (link) {
+          if (section === mostVisibleSection) {
+            link.classList.add(activeClass);
+          } else {
+            link.classList.remove(activeClass);
+          }
+        }
+      });
+
       const elementsToAnimate = [
         { selector: ".about_paragraph_container", classToAdd: "fade-in" },
         { selector: ".project_card", classToAdd: "fade-in" },
         { selector: ".skills_container", classToAdd: "fade-in" },
       ];
+
       elementsToAnimate.forEach(({ selector, classToAdd }) => {
         const elements = document.querySelectorAll(selector);
 
@@ -37,74 +91,42 @@ function App() {
           }
         });
       });
-    }, 100);
+      console.log("Most visible section:", mostVisibleSection);
+    }, 10);
 
     window.addEventListener("scroll", handleScroll);
     handleScroll();
 
-    if (shouldScrollToTop) {
-      window.scrollTo(0, 0);
-      setShouldScrollToTop(false);
-    }
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [shouldScrollToTop]);
+  }, [mostVisibleSection, sections]);
 
   return (
     <div className="app">
       <nav className="navbar">
-        <ScrollLink
-          to="intro"
-          spy={true}
-          smooth={true}
-          duration={500}
-          offset={-10}
-          activeClass="active"
-        >
-          Intro
-        </ScrollLink>
-        <ScrollLink
-          to="about"
-          spy={true}
-          smooth={true}
-          duration={500}
-          offset={-10}
-          activeClass="active"
-        >
-          About
-        </ScrollLink>
-        <ScrollLink
-          to="skills"
-          spy={true}
-          smooth={true}
-          duration={500}
-          offset={-10}
-          activeClass="active"
-        >
-          Skills
-        </ScrollLink>
-        <ScrollLink
-          to="projects"
-          spy={true}
-          smooth={true}
-          duration={500}
-          offset={30}
-          activeClass="active"
-        >
-          Projects
-        </ScrollLink>
-        <ScrollLink
-          to="contact"
-          spy={true}
-          smooth={true}
-          duration={500}
-          offset={-10}
-          activeClass="active"
-        >
-          Contact
-        </ScrollLink>
+        {sections.map((section, index) => {
+          const capitalizedSection =
+            section.charAt(0).toUpperCase() + section.slice(1);
+          const isActive = index === sections.indexOf(mostVisibleSection);
+
+          return (
+            <a
+              key={section}
+              href={`#${section}`}
+              className={isActive ? "active" : ""}
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById(section).scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }}
+            >
+              {capitalizedSection}
+            </a>
+          );
+        })}
       </nav>
       <section className="intro" id="intro">
         <div className="intro_content">
@@ -168,10 +190,21 @@ function App() {
               <img src={bitcoin_predict} alt="Project_1_img"></img>
               <h3>BitCoin Price Predicton</h3>
               <p>
-                A time series model, trained over a large dataset of stock
-                prices to predict future Bitcoin Value using LSTM and RNN
-                architecture.
+                A time series model, to predict future Bitcoin prices using
+                Conv1D and a LSTM layered RNN architecture implememting the
+                N-Beats algorithm.
               </p>
+              <a
+                href="https://github.com/sunaypanda/Bitcoin_Prediction_Model"
+                target="blank"
+              >
+                <img
+                  src={github_project}
+                  alt="Bitcoin_Prediction_Github"
+                  style={{ width: "35px", height: "35px", paddingTop: "5px" }}
+                  className="github_link"
+                ></img>
+              </a>
             </div>
             <div className="project_card">
               <div className="status">
@@ -182,9 +215,20 @@ function App() {
               <h3>NLP Sentence Classification</h3>
               <p>
                 A model to classify the different types of sentences in a text
-                and their importance to enable faster skim through using RNN
-                architecture.
+                and their importance to enable faster skim through using TF-IDF
+                classifier and embeddings.
               </p>
+              <a
+                href="https://github.com/sunaypanda/NLP_Classifier"
+                target="blank"
+              >
+                <img
+                  src={github_project}
+                  alt="NLP_CLassifier_Github"
+                  style={{ width: "35px", height: "35px", paddingTop: "5px" }}
+                  className="github_link"
+                ></img>
+              </a>
             </div>
             <div className="project_card">
               <div className="status" style={{ marginBottom: "20px" }}>
@@ -226,8 +270,8 @@ function App() {
               <h3>Finger Counting Model</h3>
               <p>
                 A real time computer vision model that employs background
-                seperation, hand segmentation and finger counting using convex
-                hull analysis.
+                seperation, hand segmentation and convex hull analysis to detect
+                the number of fingers raised.
               </p>
               <a
                 href="https://github.com/sunaypanda/Finger_Count_Model"
@@ -294,12 +338,10 @@ function App() {
                 ></img>
               </a>
             </div>
-            {/* More project cards */}
           </div>
         </div>
       </section>
     </div>
   );
 }
-
 export default App;

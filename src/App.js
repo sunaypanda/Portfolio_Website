@@ -186,7 +186,7 @@ function App() {
             <div className="project_card">
               <div className="status">
                 <div className="status-active"></div>
-                <p>Active</p>
+                <p>Ongoing</p>
               </div>
               <img src={bitcoin_predict} alt="Project_1_img"></img>
               <h3>BitCoin Price Predicton</h3>
@@ -210,7 +210,7 @@ function App() {
             <div className="project_card">
               <div className="status">
                 <div className="status-active"></div>
-                <p>Active</p>
+                <p>Ongoing</p>
               </div>
               <img src={nlp_classifier} alt="Project_2_img"></img>
               <h3>NLP Sentence Classification</h3>
@@ -232,9 +232,9 @@ function App() {
               </a>
             </div>
             <div className="project_card">
-              <div className="status" style={{ marginBottom: "20px" }}>
+              <div className="status">
                 <div className="status-complete"></div>
-                <p style={{ fontSize: "10px" }}>Completed</p>
+                <p>Completed</p>
               </div>
               <img
                 src={food_classifier}
@@ -259,9 +259,9 @@ function App() {
               </a>
             </div>
             <div className="project_card">
-              <div className="status" style={{ marginBottom: "20px" }}>
+              <div className="status">
                 <div className="status-complete"></div>
-                <p style={{ fontSize: "10px" }}>Completed</p>
+                <p>Completed</p>
               </div>
               <img
                 src={finger_counter}
@@ -287,9 +287,9 @@ function App() {
               </a>
             </div>
             <div className="project_card">
-              <div className="status" style={{ marginBottom: "20px" }}>
+              <div className="status">
                 <div className="status-complete"></div>
-                <p style={{ fontSize: "10px" }}>Completed</p>
+                <p>Completed</p>
               </div>
               <img
                 src={movie_website}
@@ -333,9 +333,9 @@ function App() {
               </div>
             </div>
             <div className="project_card">
-              <div className="status" style={{ marginBottom: "20px" }}>
+              <div className="status">
                 <div className="status-complete"></div>
-                <p style={{ fontSize: "10px" }}>Completed</p>
+                <p>Completed</p>
               </div>
               <img
                 src={portfolio_img}

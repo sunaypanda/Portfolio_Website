@@ -215,6 +215,7 @@ body {
 
 .status {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: right;
   margin-top: -0.8rem;
@@ -232,15 +233,16 @@ body {
 }
 
 .status-complete {
-  width: 5px;
-  height: 5px;
+  scale: 0.5;
+  width: 10px;
+  height: 10px;
   background-color: #9d2e2e;
   border-radius: 50%;
   margin-right: 5px;
 }
 
 .project_card:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 
@@ -334,6 +336,10 @@ body {
 
   .intro_content{
     width: 75%;
+  }
+
+  .skills_content{
+    max-width: 100%;
   }
 
   .skills_container{

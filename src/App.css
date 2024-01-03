@@ -307,7 +307,7 @@ body {
 
 @media only screen and (max-width: 768px) {
   .navbar {
-    width: auto;
+    width: 100%;
     top: 0;
     background-color: #252323;
   }
@@ -321,6 +321,19 @@ body {
     height: auto;
     margin:auto;
 
+  }
+
+  .skills_container{
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  }
+
+  .skills_1, .skills_2{
+    margin: auto;
+    padding: 25px;
   }
 
   .project_card {

@@ -132,7 +132,7 @@ function App() {
       <section className="intro" id="intro">
         <div className="intro_content">
           <h2>Hi, I am Sunay Panda</h2>
-          <p>Machine learning and AI enthusiast.</p>
+          <p>Machine learning and Computer Vision enthusiast.</p>
         </div>
       </section>
       <section className="about" id="about">
@@ -142,7 +142,8 @@ function App() {
             <p className="about_paragraph">
               I am a sophomore at the University of Houston and am majoring in
               Computer Engineering. I have developed a keen interest in Machine
-              learning and have been working to crack into the AI realm.
+              learning and computer vision, and have been working to crack into
+              the AI realm.
             </p>
             <p className="about_paragraph_2">
               I also love watching movies and TV shows and soccer.

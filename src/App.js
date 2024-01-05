@@ -166,11 +166,13 @@ function App() {
                 <li>TensorFlow</li>
                 <li>Git</li>
                 <li>Javascript</li>
+                <li>SQL</li>
               </ol>
             </div>
             <div className="skills_2">
               <ol>
-                <li>SQL</li>
+                <li>Tableau</li>
+                <li>Power Bi</li>
                 <li>React JS</li>
                 <li>HTML</li>
                 <li>CSS</li>

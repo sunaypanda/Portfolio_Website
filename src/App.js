@@ -212,8 +212,8 @@ function App() {
             </div>
             <div className="project_card">
               <div className="status">
-                <div className="status-active"></div>
-                <p>Ongoing</p>
+                <div className="status-complete"></div>
+                <p>Completed</p>
               </div>
               <img src={nlp_classifier} alt="Project_2_img"></img>
               <h3>NLP Sentence Classification</h3>

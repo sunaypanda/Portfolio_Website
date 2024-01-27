@@ -51,11 +51,11 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  animation: fadeIn 3s;
 }
 
 .intro_content {
   max-width: 800px;
-  animation: popInOut 2s ease-in-out;
 }
 
 
@@ -289,20 +289,12 @@ body {
   opacity: 1;
 }
 
-@keyframes popInOut {
-  0% {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.2);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
+
+
 
 @keyframes blink {
   0% {
@@ -339,6 +331,7 @@ body {
   }
 
   .skills_content{
+    flex-direction: column;
     max-width: 100%;
   }
 

@@ -156,6 +156,61 @@ body {
   margin-right: 0.5em;
 }
 
+.experience {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+}
+
+.experience_content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0rem;
+  height: 100vh;
+}
+
+.experience_content h1{
+  font-size: 3rem;
+}
+
+.experience_container {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.exp_1 {
+  text-align: left;
+  margin: 0px 100px;  
+}
+
+.exp_1 h2,h3{
+  margin: 15px;
+}
+
+.exp_1 ol {
+  list-style-type: none;
+  font-size: 1.4rem;
+}
+
+.exp_1 ol li::before {
+  content: "\2022";
+  color: #3498db; 
+  padding-left: -1.8rem;
+  line-height: 3rem;
+  width: 1em;
+  margin-right: 0.5em;
+}
+
+
 .projects {
   display: flex;
   align-items: center;

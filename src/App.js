@@ -15,7 +15,7 @@ import {
 function App() {
   const [mostVisibleSection, setMostVisibleSection] = useState("intro");
   const sections = useMemo(
-    () => ["intro", "about", "skills", "projects", "contact"],
+    () => ["intro", "about", "skills", "experience", "projects", "contact"],
     []
   );
 
@@ -177,6 +177,29 @@ function App() {
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>System Verilog</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="experience" id="experience">
+        <div className="experience_content">
+          <h1>Experience</h1>
+          <div className="experience_container fade-in">
+            <div className="exp_1">
+              <h2>Engineering Intern</h2>
+              <h3>C-Cubed Aerospace</h3>
+              <ol>
+                <li>
+                  Streamlined and optimized multiple databases to enhance
+                  efficiency and facilitate seamless tracking of parts,
+                  classifications and quantities as the project evolved.
+                </li>
+                <li>
+                  Implemented automation through Power BI and Power for data
+                  analysis and supplier evaluation to enhance the accuracy and
+                  speed of dynamic report generation.
+                </li>
               </ol>
             </div>
           </div>

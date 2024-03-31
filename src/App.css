@@ -160,7 +160,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
   flex-direction: column;
 }
 
@@ -363,9 +362,9 @@ body {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .navbar {
-    width: 50%;
+    width: 90%;
     margin: auto;
     display: flex;
     justify-content: space-around;
@@ -384,7 +383,7 @@ body {
     text-decoration: none;
     cursor: pointer;
     transition: color 0.3s ease-in-out;
-    padding: 5px 10px;
+    padding: 5px 0px;
     border-radius: 10px;
   }
   
@@ -397,120 +396,34 @@ body {
     color: #fff;
     border: 2px solid #fff;
   }
-  
-  
-  .intro {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    animation: fadeIn 3s;
-  }
-  
-  .intro_content {
-    max-width: 800px;
-  }
-  
-  
+
   .intro_content h2 {
-    font-size: 5rem;
-    color: #ecf0f1; 
-  }
-  
-  .intro_content p{
-    font-size: 2rem;
-  }
-  
-  .about {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding-top: 2rem;
-    height: 80vh;
-  }
-  
-  .about_content h1{
     font-size: 3rem;
   }
-  
-  .about_paragraph_container {
-    text-align: left;
-    width: 75%;
-    margin: auto;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  .about_paragraph {
-    font-size: 1.4rem;
-    line-height: 50px;  
-  }
-  
-  .about_paragraph_2 {
-    font-size: 1.4rem;
-    line-height: 40px;  
-  }
-  
+
+  .about_paragraph,
+  .about_paragraph_2,
   .about_paragraph_3 {
-    font-size: 1.4rem;
-    line-height: 40px;  
+    line-height: 30px; /* Adjust line height for mobile */
   }
-  
-  .skills {
+
+  .experience {
     display: flex;
     align-items: center;
     justify-content: center;
-  
     flex-direction: column;
   }
-  
-  .skills_content {
+  .skills_container,
+  .experience_container {
+    display: flex;
     text-align: center;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 0rem;
+    padding-top: 5rem;
     height: 100vh;
+    margin-bottom: 10px;;
   }
-  
-  .skills_content h1{
-    font-size: 3rem;
-  }
-  
-  .skills_container {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .skills_1, .skills_2 {
-    text-align: left;
-    margin: 0px 100px;
-  }
-  
-  .skills_container ol {
-    list-style-type: none;
-    font-size: 1.4rem;
-    margin: 0;
-    padding: 0;
-  
-  }
-  
-  .skills_container ol li::before {
-    content: "\2022";
-    color: #3498db; 
-    display: inline-block;
-    line-height: 3rem;
-    width: 1em;
-    margin-right: 0.5em;
-  }
-  .project_card {
-      width: 100%;
-  }
+
 
 }

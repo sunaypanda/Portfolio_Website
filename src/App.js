@@ -10,12 +10,14 @@ import {
   portfolio_img,
   finger_counter,
   open_link,
+  award_post,
+  award_devpost
 } from "./image_import.js";
 
 function App() {
   const [mostVisibleSection, setMostVisibleSection] = useState("intro");
   const sections = useMemo(
-    () => ["intro", "about", "skills", "experience", "projects", "contact"],
+    () => ["intro", "about", "skills", "experience", "awards", "projects", "contact"],
     []
   );
 
@@ -74,6 +76,7 @@ function App() {
       const elementsToAnimate = [
         { selector: ".about_paragraph_container", classToAdd: "fade-in" },
         { selector: ".project_card", classToAdd: "fade-in" },
+        { selector: ".award_card", classToAdd: "fade-in" },
         { selector: ".skills_container", classToAdd: "fade-in" },
       ];
 
@@ -201,6 +204,72 @@ function App() {
                   speed of dynamic report generation.
                 </li>
               </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="awards" id="awards">
+        <div className="awards_content">
+          <h2>Awards</h2>
+          <div className="award_cards_container fade-in">
+            <div className="award_card">
+              <h3>Best Overall App</h3>
+              <h4>UTSA Rowdy Hacks</h4>
+              <p>
+                Developed a real time ASL sign language translator using OpenCV and Media Pipe Libraries 
+                and a custom trained Yolov8 model based on the Random Forest Classifier.
+              </p>
+              <p>Competed against 87 teams with 550+ participants.</p>
+              <a
+                href="https://www.linkedin.com/feed/update/urn:li:activity:7168735323227631617/"
+                target="blank"
+              >
+                <img
+                  src={award_post}
+                  alt="Award_1_Post"
+                  style={{ width: "35px", height: "35px", paddingTop: "5px" }}
+                  className="github_link"
+                ></img>
+              </a>
+              <a
+                  href="https://devpost.com/software/sign_interpreter_app"
+                  target="blank"
+                >
+                  <img
+                    src={award_devpost}
+                    alt="Award_1_Devpost"
+                    style={{
+                      width: "35px",
+                      height: "35px",
+                      paddingTop: "5px",
+                      marginLeft: "10px",
+                    }}
+                    className="github_link"
+                  ></img>
+                </a>
+            </div>
+            <div className="award_card">
+              <h3>3rd Best campus solution</h3>
+              <h4>UH Ideathon</h4>
+              <p>
+                Developed a gamified solution to provide redeemable points at campus events to encourage student attendance.</p>
+              <p>Competed against the Top 6 selected out of 56 teams with 200+ members.</p>
+              <div className="award_1_link">
+              <a
+                href="https://www.linkedin.com/feed/update/urn:li:activity:7178394456843280386/"
+                target="blank"
+              >
+                <img
+                  src={award_post}
+                  alt="Award_2_Post"
+                  style={{ width: "35px", 
+                           height: "35px",
+                           paddingTop: "5px"
+                          }}
+                  className="award_2_post"
+                ></img>
+              </a>
+              </div>
             </div>
           </div>
         </div>

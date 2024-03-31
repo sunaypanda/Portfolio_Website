@@ -210,6 +210,53 @@ body {
 }
 
 
+.awards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: auto;
+}
+
+.awards_content{
+  padding-top: 5rem;
+}
+
+.awards_content h2{
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.award_cards_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 75%;
+  margin: auto;
+}
+
+.award_card {
+  background-color: #d2d6dd;
+  color: #202121;
+  border-radius: 30px;
+  padding: 15px;
+  margin: 25px 20px;
+  width: 300px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  text-align: center;
+}
+.award_card img{
+  width: 250px;
+  border-radius: 30px;
+  opacity: 1;
+}
+
+.award_card:hover {
+  transform: scale(1.1);
+}
+
+
 .projects {
   display: flex;
   align-items: center;
@@ -252,6 +299,7 @@ body {
   border-radius: 30px;
   opacity: 1;
 }
+
 
 .movie_website_link{
   align-items: center;
@@ -319,7 +367,6 @@ body {
 }
 
 
-
 #contact{
   align-items: center;
   text-align: center;
@@ -385,6 +432,7 @@ body {
     transition: color 0.3s ease-in-out;
     padding: 5px 0px;
     border-radius: 10px;
+    font-size: 13px;
   }
   
   .navbar a:hover {
@@ -397,8 +445,22 @@ body {
     border: 2px solid #fff;
   }
 
+  .intro {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    animation: fadeIn 3s;
+  }
+
   .intro_content h2 {
     font-size: 3rem;
+  }
+
+  .about {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    animation: fadeIn 3s;
   }
 
   .about_paragraph,
@@ -413,17 +475,30 @@ body {
     justify-content: center;
     flex-direction: column;
   }
-  .skills_container,
-  .experience_container {
+  .skills_content{
+    height: 100vh;;
+  }
+  .skills_container {
     display: flex;
     text-align: center;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 5rem;
-    height: 100vh;
-    margin-bottom: 10px;;
+    padding-bottom: 0px;
+  }
+
+  
+.skills_1, .skills_2 {
+  text-align: left;
+  margin: 0px 0px;
+  padding: 10px;
+}
+
+
+  .exp_1 {
+    text-align: left;
+    margin: 0px 10px;  
   }
 
 
 }
+

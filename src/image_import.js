@@ -6,6 +6,8 @@ import github_project from "./images/github_logo_project.png";
 import portfolio_img from "./images/portfolio_website.png";
 import finger_counter from "./images/finger_counter.png";
 import open_link from "./images/open_link.png";
+import award_post from "./images/linkedin_icon.png";
+import award_devpost from "./images/devpost_icon.png";
 export {
   bitcoin_predict,
   movie_website,
@@ -15,4 +17,6 @@ export {
   portfolio_img,
   finger_counter,
   open_link,
+  award_post,
+  award_devpost
 };

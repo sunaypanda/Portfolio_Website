@@ -209,13 +209,8 @@ body {
   margin-right: 0.5em;
 }
 
-
 .awards {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: auto;
+  height: 100vh;
 }
 
 .awards_content{
@@ -233,6 +228,7 @@ body {
   justify-content: center;
   max-width: 75%;
   margin: auto;
+
 }
 
 .award_card {
@@ -245,11 +241,6 @@ body {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
   text-align: center;
-}
-.award_card img{
-  width: 250px;
-  border-radius: 30px;
-  opacity: 1;
 }
 
 .award_card:hover {
@@ -497,6 +488,14 @@ body {
   .exp_1 {
     text-align: left;
     margin: 0px 10px;  
+  }
+
+  .awards, projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: auto;
   }
 
 

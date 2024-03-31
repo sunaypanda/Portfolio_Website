@@ -213,8 +213,8 @@ function App() {
           <h2>Awards</h2>
           <div className="award_cards_container fade-in">
             <div className="award_card">
-              <h3>Best Overall App</h3>
-              <h4>UTSA Rowdy Hacks</h4>
+              <h1 style={{ fontSize: "23px" }}>Best Overall App</h1>
+              <h1 style={{ fontSize: "20px" }}>UTSA Rowdy Hacks</h1>
               <p>
                 Developed a real time ASL sign language translator using OpenCV and Media Pipe Libraries 
                 and a custom trained Yolov8 model based on the Random Forest Classifier.
@@ -249,11 +249,11 @@ function App() {
                 </a>
             </div>
             <div className="award_card">
-              <h3>3rd Best campus solution</h3>
-              <h4>UH Ideathon</h4>
+              <h1 style={{ fontSize: "23px" }}>3rd Best campus solution</h1>
+              <h1 style={{ fontSize: "20px" }}>UH Ideathon</h1>
               <p>
                 Developed a gamified solution to provide redeemable points at campus events to encourage student attendance.</p>
-              <p>Competed against the Top 6 selected out of 56 teams with 200+ members.</p>
+              <p>Competed against the Top 6 selected out of 56 teams with 200+ members at the University of Houston.</p>
               <div className="award_1_link">
               <a
                 href="https://www.linkedin.com/feed/update/urn:li:activity:7178394456843280386/"
@@ -266,7 +266,7 @@ function App() {
                            height: "35px",
                            paddingTop: "5px"
                           }}
-                  className="award_2_post"
+                  className="github_link"
                 ></img>
               </a>
               </div>

@@ -42,7 +42,14 @@ export default function Main() {
 
 
 
-
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+      toggleMenu(); // Optional: closes the menu after scrolling
+    }
+  };
+  
 
 
 
@@ -83,7 +90,7 @@ export default function Main() {
 
   return (
     <div className="App">
-      <div className="main-container">
+      <div  id="home" className="main-container">
         <div className="navbar">
           <button className="hamburger" onClick={toggleMenu}>
             ☰
@@ -96,24 +103,24 @@ export default function Main() {
                 ✕
               </button>
               <div className="menu-content">
-                <span onClick={toggleMenu}>Home</span>
-                <span onClick={toggleMenu}>About Me</span>
-                <span onClick={toggleMenu}>Skills</span>
-                <span onClick={toggleMenu}>Experience</span>
-                <span onClick={toggleMenu}>Projects</span>
-                <span onClick={toggleMenu}>Contact</span>
+                <span onClick={() => scrollToSection("home")}>Home</span>
+                <span onClick={() => scrollToSection("about")}>About Me</span>
+                <span onClick={() => scrollToSection("skills")}>Skills</span>
+                <span onClick={() => scrollToSection("experience")}>Experience</span>
+                <span onClick={() => scrollToSection("projects")}>Projects</span>
+                <span onClick={() => scrollToSection("contact")}>Contact</span>
               </div>
             </div>
           )}
         </div>
 
         <div className="section">
-          <span className="text">Home</span>
-          <span className="text-2">About Me</span>
-          <span className="text-3">Skills</span>
-          <span className="text-4">Experience</span>
-          <span className="text-5">Projects</span>
-          <span className="text-6">Contact</span>
+          <span onClick={() => scrollToSection("home")} className="text" style={{ cursor: 'pointer' }}>Home</span>
+          <span onClick={() => scrollToSection("about")} className="text-2" style={{ cursor: 'pointer' }}>About Me</span>
+          <span onClick={() => scrollToSection("skills")} className="text-3" style={{ cursor: 'pointer' }}>Skills</span>
+          <span onClick={() => scrollToSection("experience")} className="text-4" style={{ cursor: 'pointer' }}>Experience</span>
+          <span onClick={() => scrollToSection("projects")} className="text-5" style={{ cursor: 'pointer' }}>Projects</span>
+          <span onClick={() => scrollToSection("contact")} className="text-6" style={{ cursor: 'pointer' }}>Contact</span>
         </div>
           <div className="group">
                 <div className='wrapper'>
@@ -122,7 +129,7 @@ export default function Main() {
                         Passionate about exploring the space of Machine Learning, Generative
                         AI and Computer Vision.
                     </span>
-                    <div className='box'>
+                    <div onClick={() => scrollToSection("contact")} className='box' style={{ cursor: 'pointer' }}>
                         <span className='text-9'>Get in Touch</span>
                     </div>
                 </div>
@@ -130,7 +137,7 @@ export default function Main() {
                     <div className='pic' />
                 </div>
             </div>
-            <div className='group-3 fade'>
+            <div id="about" className='group-3 fade'>
                 <span className='text-a'>About Me </span>
                 <span className='text-b'>
                     <br />
@@ -151,7 +158,7 @@ export default function Main() {
                     Soccer Position: Left Wing
                 </span>
             </div>
-            <div className='group-4 fade'>
+            <div id="skills" className='group-4 fade'>
                 <span className='text-c'>Skills</span>
                 <div className='group-5 fade'>
                     <div className='group-6'>
@@ -222,7 +229,7 @@ export default function Main() {
                     </div>
                 </div>
             </div>
-            <div className='box-9 fade'>
+            <div id="experience" className='box-9 fade'>
                 <span className='text-1d'>Experience</span>
                 <div className='section-6 fade'>
                     <div className='pic-b' />
@@ -304,10 +311,11 @@ export default function Main() {
                     </span>
                 </div>
             </div>
-            <div className='section-7 fade'>
+            <div id="projects" className='section-7 fade'>
                 <span className='text-2e'>Projects</span>
                 <div className='wrapper-9 fade'>
-                    <div className='section-8 fade'>
+                    <div className='section-8 fade' style={{ cursor: 'pointer' }} onClick={() => window.open('https://github.com/sunaypanda/NLP_Classifier', '_blank')}
+                    >
                         <div className='img-8' />
                         <div className='wrapper-a'>
                             <span className='text-2f'>NLP Sentence Classification</span>
@@ -318,7 +326,7 @@ export default function Main() {
                             </span>
                         </div>
                     </div>
-                    <div className='group-9 fade'>
+                    <div className='group-9 fade' style={{ cursor: 'pointer' }} onClick={() => window.open('https://github.com/sunaypanda/Finger_Count_Model', '_blank')}>
                         <div className='img-9' />
                         <div className='box-e'>
                             <span className='text-31'>Finger Counting Model</span>
@@ -329,7 +337,7 @@ export default function Main() {
                             </span>
                         </div>
                     </div>
-                    <div className='group-a fade'>
+                    <div className='group-a fade' style={{ cursor: 'pointer' }} onClick={() => window.open('https://github.com/sunaypanda/Portfolio_Website', '_blank')}>
                         <div className='pic-e' />
                         <div className='wrapper-b'>
                             <span className='text-33'>Portfolio Website</span>
@@ -340,7 +348,7 @@ export default function Main() {
                             </span>
                         </div>
                     </div>
-                    <div className='group-b fade'>
+                    <div className='group-b fade' style={{ cursor: 'pointer' }} onClick={() => window.open('https://github.com/sunaypanda/Food_Classification_Model', '_blank')}>
                         <div className='img-a' />
                         <div className='box-f'>
                             <span className='text-35'>Food Image Classification</span>
@@ -350,7 +358,7 @@ export default function Main() {
                             </span>
                         </div>
                     </div>
-                    <div className='box-10 fade'>
+                    <div className='box-10 fade' style={{ cursor: 'pointer' }} onClick={() => window.open('https://movie-search-sunay.netlify.app', '_blank')}>
                         <div className='pic-f' />
                         <div className='wrapper-c'>
                             <span className='text-37'>Movie Search Website</span>
@@ -363,20 +371,19 @@ export default function Main() {
                     </div>
                 </div>
             </div>
-            <div className='box-11 fade'>
+            <div id="contact" className='box-11 fade'>
                 <span className='text-39'>Get in Touch</span>
                 <div className='section-9 fade'>
-                    <div className='img-b' />
-                    <span className='text-3a'>sunaypanda12@gmail.com</span>
+                    <div className='img-b' style={{ cursor: 'pointer' }} onClick={() => window.open('mailto:sunaypanda12@gmail.com', '_blank')}/>
+                    <span className='text-3a' style={{ cursor: 'pointer' }} onClick={() => window.open('mailto:sunaypanda12@gmail.com', '_blank')}>sunaypanda12@gmail.com</span>
                 </div>
                 <div className='section-a fade'>
-                    <div className='img-c' />
-                    <div className='img-d' />
-                    <div className='pic-10' />
-                </div>
+                    <div className='img-c' style={{ cursor: 'pointer' }} onClick={() => window.open('https://www.linkedin.com/in/sunay-panda/', '_blank')}/>
+                    <div className='img-d' style={{ cursor: 'pointer' }} onClick={() => window.open('https://github.com/sunaypanda', '_blank')}/>
+                    <div className='pic-10' style={{ cursor: 'pointer' }} onClick={() => window.open('https://www.instagram.com/sunaypanda01/', '_blank')}/>
+                    </div>
             </div>
         </div>
     </div>
     );
 }
-

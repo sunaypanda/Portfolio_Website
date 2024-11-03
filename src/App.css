@@ -62,11 +62,13 @@ button {
   position: relative;
   width: 1230px;
   margin: 0 auto;
-  padding: 7px 0 7px 0;
+  padding: 7px 0;
   background: #875041;
   border-radius: 30px;
 }
-.text {
+
+/* Base styles for all text items */
+.text, .text-2, .text-3, .text-4, .text-5, .text-6 {
   flex-basis: auto;
   height: 36px;
   color: #ffffff;
@@ -77,113 +79,14 @@ button {
   text-align: left;
   white-space: nowrap;
   letter-spacing: 0.72px;
-  z-index: 1;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.text:hover {
-  transform: scale(1.2); /* Slight enlargement */
+/* Hover effect for all text items */
+.text:hover, .text-2:hover, .text-3:hover, .text-4:hover, .text-5:hover, .text-6:hover {
+  transform: scale(1.2);
 }
 
-
-.text-2 {
-  flex-basis: auto;
-  position: relative;
-  height: 36px;
-  color: #ffffff;
-  font-family: var(--default-font-family);
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 36px;
-  text-align: left;
-  white-space: nowrap;
-  letter-spacing: 0.72px;
-  z-index: 2;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.text-2:hover {
-  transform: scale(1.2); /* Slight enlargement */
-}
-
-.text-3 {
-  flex-basis: auto;
-  position: relative;
-  height: 36px;
-  color: #ffffff;
-  font-family: var(--default-font-family);
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 36px;
-  text-align: left;
-  white-space: nowrap;
-  letter-spacing: 0.72px;
-  z-index: 3;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.text-3:hover {
-  transform: scale(1.2); /* Slight enlargement */
-}
-
-.text-4 {
-  flex-basis: auto;
-  position: relative;
-  height: 36px;
-  color: #ffffff;
-  font-family: var(--default-font-family);
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 36px;
-  text-align: left;
-  white-space: nowrap;
-  letter-spacing: 0.72px;
-  z-index: 4;transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.text-4:hover {
-  transform: scale(1.2); /* Slight enlargement */
-}
-
-.text-5 {
-  flex-basis: auto;
-  position: relative;
-  height: 36px;
-  color: #ffffff;
-  font-family: var(--default-font-family);
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 36px;
-  text-align: left;
-  white-space: nowrap;
-  letter-spacing: 0.72px;
-  z-index: 5;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.text-5:hover {
-  transform: scale(1.2); /* Slight enlargement */
-}
-
-.text-6 {
-  flex-basis: auto;
-  position: relative;
-  height: 36px;
-  color: #ffffff;
-  font-family: var(--default-font-family);
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 36px;
-  text-align: left;
-  white-space: nowrap;
-  letter-spacing: 0.72px;
-  z-index: 6;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.text-6:hover {
-  transform: scale(1.2); /* Slight enlargement */
-}
 
 .group {
   display: flex;
@@ -276,16 +179,11 @@ button {
 }
 .box {
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
-  flex-shrink: 0;
   gap: 10px;
-  position: relative;
-  width: 188px;
   padding: 17px 23px 17px 23px;
   background: #875041;
-  z-index: 11;
   border-radius: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
@@ -297,21 +195,16 @@ button {
 
 .text-9 {
   display: flex;
-  align-items: flex-start;
-  flex-shrink: 0;
-  flex-basis: auto;
-  position: relative;
   height: 17px;
   color: #fdede1;
   font-family: var(--default-font-family);
   font-size: 21px;
   font-weight: 400;
   line-height: 17px;
-  text-align: justified;
   white-space: nowrap;
   letter-spacing: 0.63px;
-  z-index: 12;
 }
+
 .group-2 {
   display: flex;
   align-items: center;
@@ -321,22 +214,19 @@ button {
   position: relative;
   width: 490px; /* Ensure the width of the group matches the image */
   padding: 5px;
-  background: linear-gradient(#fdede1, #fdede1); /* Apply the background */
-  z-index: 13;
   border-radius: 50%; /* Adjust this for perfect rounding */
-  box-shadow: 0 6px 6px 0 rgba(135, 80, 65, 0.5); /* Subtle shadow */
+  box-shadow: inset 15px 150px 150px 150px rgba(209, 132, 15, 0.47); /* Subtle shadow */
 }
 
 .pic {
-  flex-shrink: 0;
-  position: relative;
-  width: 480px; /* Keep it slightly smaller than the container */
-  height: 480px;
-  background: url('Red Labs Headshots 23-modified (1).png') no-repeat center;
+  width: 490px; /* Full width for responsiveness */
+  aspect-ratio: 1; /* Ensures image maintains square aspect ratio */
+  background: url(Red\ Labs\ Headshots\ 23-modified\ \(1\).png) no-repeat center;
   background-size: cover;
-  border-radius: 50%; /* Make sure the image is circular */
-  z-index: 14;
+  border-radius: 50%; /* Circular image styling */
+  overflow: hidden; /* Prevents overflow */
 }
+
 
 .group-3 {
   display: flex;

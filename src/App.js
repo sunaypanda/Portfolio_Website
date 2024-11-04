@@ -233,13 +233,13 @@ export default function Main() {
                     <div className='pic-b' />
                     <div className='box-a'>
                         <span className='text-1e'>Stayzy</span>
-                        <span className='text-1f'>Founder, Lead Engineer</span>
+                        <span className='text-1f'>Founder</span>
                         <span className='text-20'>
                             Developing an AI assistant to automate guest communication
                             <br />
                             and streamline operations at Short Term Rentals.
                             <br />
-                            Provide, 24/7 conversational AI customer support, review analysis
+                            Provide 24/7 conversational AI customer support, maintenance automation
                             and upselling.
                             <br />
                         </span>

@@ -163,11 +163,11 @@ export default function Main() {
                 <div className='group-5 fade'>
                     <div className='group-6'>
                         <div className='pic-2' />
-                        <span className='text-d'>Javascript</span>
+                        <span className='text-d'>Python</span>
                     </div>
                     <div className='section-2'>
                         <div className='img' />
-                        <span className='text-e'>Git</span>
+                        <span className='text-e'>TensorFlow</span>
                     </div>
                     <div className='section-3'>
                         <div className='img-2' />
@@ -175,53 +175,51 @@ export default function Main() {
                     </div>
                     <div className='box-2'>
                         <div className='pic-3' />
-                        <span className='text-10'>HTML</span>
+                        <span className='text-10'>Pandas</span>
                     </div>
                     <div className='box-3'>
                         <div className='pic-4' />
-                        <span className='text-11'>Node.js</span>
+                        <span className='text-11'>MATLAB</span>
                     </div>
                     <div className='group-7'>
                         <div className='pic-5' />
-                        <span className='text-12'>MATLAB</span>
+                        <span className='text-12'>C++</span>
                     </div>
                     <div className='wrapper-2'>
                         <div className='img-3' />
-                        <span className='text-13'>PowerBi</span>
+                        <span className='text-13'>JavaScript</span>
                     </div>
                     <div className='group-8'>
                         <div className='pic-6' />
-                        <span className='text-14'>Python</span>
+                        <span className='text-14'>PostgreSQL</span>
                     </div>
-                </div>
-                <div className='box-4 fade'>
                     <div className='wrapper-3'>
                         <div className='img-4' />
-                        <span className='text-15'>PostgreSQL</span>
+                        <span className='text-15'>MongoDB</span>
                     </div>
                     <div className='box-5'>
                         <div className='pic-7' />
-                        <span className='text-16'>MongoDB</span>
+                        <span className='text-16'>Git</span>
                     </div>
                     <div className='box-6'>
                         <div className='pic-8' />
-                        <span className='text-17'>C++</span>
+                        <span className='text-17'>NodeJS</span>
                     </div>
                     <div className='section-4'>
                         <div className='pic-9' />
-                        <span className='text-18'>Pandas</span>
+                        <span className='text-18'>HTML</span>
                     </div>
                     <div className='wrapper-4'>
                         <div className='img-5' />
-                        <span className='text-19'>Figma</span>
+                        <span className='text-19'>CSS</span>
                     </div>
                     <div className='box-7'>
                         <div className='pic-a' />
-                        <span className='text-1a'>TensorFlow</span>
+                        <span className='text-1a'>Figma</span>
                     </div>
                     <div className='section-5'>
                         <div className='img-6' />
-                        <span className='text-1b'>CSS</span>
+                        <span className='text-1b'>PowerBI</span>
                     </div>
                     <div className='box-8'>
                         <div className='img-7' />

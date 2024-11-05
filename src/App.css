@@ -308,7 +308,7 @@ button {
 /* Icon styles with flexible width */
 .pic-2 {
   background: url(Skills/python.png) no-repeat center;
-  background-size: cover;
+  background-size: contain;
   width: 100%;
   max-width: 90px;
   height: 90px;
@@ -316,7 +316,7 @@ button {
 
 .img {
   background: url(tensorflow.png) no-repeat center;
-  background-size: cover;
+  background-size: contain;
   width: 100%;
   max-width: 80px;
   height: 90px;
@@ -324,7 +324,7 @@ button {
 
 .img-2 {
   background: url(react.png) no-repeat center;
-  background-size: cover;
+  background-size: contain;
   width: 100%;
   max-width: 80px;
   height: 90px;
@@ -332,7 +332,7 @@ button {
 
 .pic-3 {
   background: url(pandas.png) no-repeat center;
-  background-size: cover;
+  background-size: contain;
   width: 100%;
   max-width: 80px;
   height: 90px;
@@ -347,16 +347,15 @@ button {
 
 
 .pic-5 {
-  background: url(c++.png) no-repeat center;
-  background-size: cover;
+  background: url(c.png) no-repeat center;
+  background-size: contain;
   width: 100%;
-  max-width: 80px;
-  height: 90px;
+  height: 100%;
 }
 
 .img-3 {
   background: url(JavaScript.png) no-repeat center;
-  background-size: cover;
+  background-size: contain;
   width: 100%;
   max-width: 80px;
   height: 90px;
@@ -364,7 +363,7 @@ button {
 
 .pic-6 {
   background: url(postgresql.png) no-repeat center;
-  background-size: cover;
+  background-size: contain;
   width: 100%;
   max-width: 85px;
   height: 90px;
@@ -372,23 +371,22 @@ button {
 
 .img-4 {
   background: url(mongo.png) no-repeat center;
-  background-size: cover;
+  background-size: contain;
   width: 100%;
   max-width: 80px;
   height: 90px;
 }
 
 .pic-7 {
-  background: url(git.png) no-repeat center;
-  background-size: cover;
+  background: url(c++.png) no-repeat center;
+  background-size: contain;
   width: 100%;
-  max-width: 90px;
-  height: 90px;
+  height: 100%;
 }
 
 .pic-8 {
   background: url(node.png) no-repeat center;
-  background-size: cover;
+  background-size: contain;
   width: 100%;
   max-width: 80px;
   height: 90px;
@@ -396,7 +394,7 @@ button {
 
 .pic-9 {
   background: url(html.png) no-repeat center;
-  background-size: cover;
+  background-size: contain;
   width: 100%;
   max-width: 80px;
   height: 90px;
@@ -404,7 +402,7 @@ button {
 
 .img-5 {
   background: url(css.png) no-repeat center;
-  background-size: cover;
+  background-size: contain;
   width: 100%;
   max-width: 80px;
   height: 90px;
@@ -412,7 +410,7 @@ button {
 
 .pic-a {
   background: url(figma.png) no-repeat center;
-  background-size: cover;
+  background-size: contain;
   width: 100%;
   max-width: 80px;
   height: 90px;
@@ -420,7 +418,7 @@ button {
 
 .img-6 {
   background: url(powerbi.png) no-repeat center;
-  background-size: cover;
+  background-size: contain;
   width: 100%;
   max-width: 80px;
   height: 90px;
@@ -428,7 +426,7 @@ button {
 
 .img-7 {
   background: url(Skills/arduino.png) no-repeat center;
-  background-size: cover;
+  background-size: contain;
   width: 100%;
   max-width: 90px;
   height: 90px;

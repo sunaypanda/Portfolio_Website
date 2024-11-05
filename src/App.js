@@ -183,7 +183,7 @@ export default function Main() {
                     </div>
                     <div className='group-7'>
                         <div className='pic-5' />
-                        <span className='text-12'>C++</span>
+                        <span className='text-12'>C</span>
                     </div>
                     <div className='wrapper-2'>
                         <div className='img-3' />
@@ -199,7 +199,7 @@ export default function Main() {
                     </div>
                     <div className='box-5'>
                         <div className='pic-7' />
-                        <span className='text-16'>Git</span>
+                        <span className='text-16'>C++</span>
                     </div>
                     <div className='box-6'>
                         <div className='pic-8' />

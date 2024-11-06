@@ -107,6 +107,7 @@ export default function Main() {
                 <span onClick={() => scrollToSection("about")}>About Me</span>
                 <span onClick={() => scrollToSection("skills")}>Skills</span>
                 <span onClick={() => scrollToSection("experience")}>Experience</span>
+                <span onClick={() => scrollToSection("awards")}>Awards</span>
                 <span onClick={() => scrollToSection("projects")}>Projects</span>
                 <span onClick={() => scrollToSection("contact")}>Contact</span>
               </div>
@@ -119,6 +120,7 @@ export default function Main() {
           <span onClick={() => scrollToSection("about")} className="text-2" style={{ cursor: 'pointer' }}>About Me</span>
           <span onClick={() => scrollToSection("skills")} className="text-3" style={{ cursor: 'pointer' }}>Skills</span>
           <span onClick={() => scrollToSection("experience")} className="text-4" style={{ cursor: 'pointer' }}>Experience</span>
+          <span onClick={() => scrollToSection("awards")} className="text-x" style={{ cursor: 'pointer' }}>Awards</span>
           <span onClick={() => scrollToSection("projects")} className="text-5" style={{ cursor: 'pointer' }}>Projects</span>
           <span onClick={() => scrollToSection("contact")} className="text-6" style={{ cursor: 'pointer' }}>Contact</span>
         </div>
@@ -278,7 +280,7 @@ export default function Main() {
                     
                 </div>
             </div>
-            <div className='wrapper-7 fade'>
+            <div id='awards' className='wrapper-7 fade'>
                 <span className='text-27'>Awards</span>
                 <div className='wrapper-8 fade'>
                     <span className='text-28'>Best Overall App</span>
@@ -335,17 +337,7 @@ export default function Main() {
                             </span>
                         </div>
                     </div>
-                    <div className='group-a fade' style={{ cursor: 'pointer' }} onClick={() => window.open('https://github.com/sunaypanda/Portfolio_Website', '_blank')}>
-                        <div className='pic-e' />
-                        <div className='wrapper-b'>
-                            <span className='text-33'>Portfolio Website</span>
-                            <span className='text-34'>
-                                A React Application written with JS, HTML and CSS, and designed
-                                using Figma to create a portfolio displaying my skills, and
-                                projects.
-                            </span>
-                        </div>
-                    </div>
+                    
                     <div className='group-b fade' style={{ cursor: 'pointer' }} onClick={() => window.open('https://github.com/sunaypanda/Food_Classification_Model', '_blank')}>
                         <div className='img-a' />
                         <div className='box-f'>
@@ -364,6 +356,17 @@ export default function Main() {
                                 A React Application built using JS, HTML and CSS, that pulls
                                 search data and displays movie cards from a real time open movie
                                 database.
+                            </span>
+                        </div>
+                    </div>
+                    <div className='group-a fade' style={{ cursor: 'pointer' }} onClick={() => window.open('https://github.com/sunaypanda/Portfolio_Website', '_blank')}>
+                        <div className='pic-e' />
+                        <div className='wrapper-b'>
+                            <span className='text-33'>Portfolio Website</span>
+                            <span className='text-34'>
+                                A React Application written with JS, HTML and CSS, and designed
+                                using Figma to create a portfolio displaying my skills, and
+                                projects.
                             </span>
                         </div>
                     </div>

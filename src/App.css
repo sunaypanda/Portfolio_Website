@@ -1,0 +1,2126 @@
+
+ @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+ :root {
+   --default-font-family: 'DM Sans';
+ }
+
+/* Only animation styles in the fade class */
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+ 
+.main-container {
+  overflow: hidden;
+}
+
+.main-container,
+.main-container * {
+  box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10vh;
+  position: relative;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 40px 10vw 50px 10vw;
+  background: #fdede1;
+  overflow: hidden;
+}
+
+.navbar{
+  display: none;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  gap: 0.5vw; /* Responsive gap between items */
+  width: 80%;
+  margin: 0 auto;
+  padding: 0.5vh 0; /* Vertical padding that adapts to viewport height */
+  background: #875041;
+  border-radius: 2vw; /* Responsive border radius */
+}
+
+/* Base styles for all text items */
+.text, .text-2, .text-3, .text-4, .text-5, .text-6, .text-x {
+  flex-basis: auto;
+  color: #ffffff;
+  font-family: var(--default-font-family);
+  font-size: 1.3vw; /* Responsive font size */
+  font-weight: 400;
+  line-height: 1em; /* Keeps consistent line height relative to font size */
+  text-align: left;
+  white-space: nowrap;
+  letter-spacing: 0.05em; /* Proportional letter spacing */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  padding: 0.5em 1em; /* Adds some padding around text */
+}
+
+/* Hover effect for all text items */
+.text:hover, .text-2:hover, .text-3:hover, .text-4:hover, .text-5:hover, .text-6:hover, .text-x:hover {
+  transform: scale(1.2);
+}
+
+
+/* Main container for grouped elements */
+.group {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 70px;
+  position: relative;
+  flex-wrap: nowrap; /* Keeps .wrapper and .group-2 side-by-side */
+  box-sizing: border-box;
+  z-index: 7;
+}
+
+/* Wrapper for text and additional content */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 20px;
+  gap: 29px;
+  position: relative;
+  box-sizing: border-box;
+  z-index: 8;
+}
+
+/* Primary text styling for title */
+.text-7 {
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 77px;
+  color: #000000;
+  font-family: var(--default-font-family);
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 76.8px;
+  text-align: left;
+  white-space: nowrap;
+  letter-spacing: 1.92px;
+  z-index: 9;
+}
+
+/* Animation class for wiggle effect */
+.wiggle {
+  display: inline-block;
+  animation-fill-mode: forwards;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: none;
+  }
+  25% {
+    transform: rotateX(30deg) translateY(10px) rotate(-13deg);
+  }
+  50% {
+    transform: translateY(-22px) rotate(3deg) scale(1.1);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+/* Secondary text styling for description */
+.text-8 {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  height: auto;
+  color: #000000;
+  font-family: var(--default-font-family);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: 0.96px;
+  z-index: 10;
+}
+
+/* Box styling with hover effect */
+.box {
+  display: flex;
+  justify-content: center;
+  padding: 17px 23px;
+  background: #875041;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.box:hover {
+  transform: scale(1.25);
+}
+
+/* Text inside box */
+.text-9 {
+  color: #fdede1;
+  font-family: var(--default-font-family);
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+  letter-spacing: 0.63px;
+}
+
+/* Circular container for image with shadow, set to 30% width */
+.group-2 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: rgba(209, 132, 15, 0.15);
+  box-shadow: inset 15px 15px 15px rgba(209, 132, 15, 0.47);
+  overflow: hidden;
+}
+
+/* Image inside circular group container */
+.pic {
+  width: 100%;
+  aspect-ratio: 1; /* Maintains square shape */
+  background: url('Red Labs Headshots 23-modified (1).png') no-repeat center;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+
+.group-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 44px;
+  height: max-content;
+  position: relative;
+  min-width: 0;
+  padding: 64px 50px 64px 50px;
+  z-index: 15;
+}
+.text-a {
+  align-self: stretch;
+  flex-shrink: 0;
+  flex-basis: auto;
+  position: relative;
+  height: 96px;
+  color: #000000;
+  font-family: var(--default-font-family);
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 96px;
+  text-align: left;
+  white-space: nowrap;
+  letter-spacing: 1.92px;
+  z-index: 16;
+}
+.text-b {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  width: 100%;
+  height: auto;
+  color: #000000;
+  font-family: var(--default-font-family);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 42px;
+  text-align: left;
+  letter-spacing: 0.84px;
+  z-index: 17;
+}
+
+/* Container for the entire "Skills" section */
+.group-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+  padding: 0 0px;
+  z-index: 18;
+}
+
+/* Centered "Skills" heading */
+.text-c {
+  color: #000000;
+  font-family: var(--default-font-family);
+  font-size: 65px;
+  font-weight: 700;
+  line-height: 97.5px;
+  text-align: center;
+  letter-spacing: 1.95px;
+  z-index: 19;
+}
+
+/* Main container for icons, with wrap enabled */
+.group-5 {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to a new row as needed */
+  justify-content: center;
+  gap: 30px; /* Space between items */
+  width: 100%; /* Full width of the screen */
+  box-sizing: border-box;
+  padding: 20px 0;
+  z-index: 20;
+}
+
+/* Individual icon/text containers */
+.group-6, .section-2, .section-3, .box-2, .box-3, .group-7, .wrapper-2, .group-8, .wrapper-3, .box-5, .box-6, .section-4, .wrapper-4, .box-7, .section-5, .box-8 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 8vw;
+  height: auto;
+  gap: 15px;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Icon styles with flexible width */
+.pic-2 {
+  background: url(Skills/python.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  max-width: 90px;
+  height: 90px;
+}
+
+.img {
+  background: url(tensorflow.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  max-width: 80px;
+  height: 90px;
+}
+
+.img-2 {
+  background: url(react.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  max-width: 80px;
+  height: 90px;
+}
+
+.pic-3 {
+  background: url(pandas.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  max-width: 80px;
+  height: 90px;
+}
+
+.pic-4 {
+  background: url(matlab.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  height: 90px;
+}
+
+
+.pic-5 {
+  background: url(c.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.img-3 {
+  background: url(JavaScript.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  max-width: 80px;
+  height: 90px;
+}
+
+.pic-6 {
+  background: url(postgresql.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  max-width: 85px;
+  height: 90px;
+}
+
+.img-4 {
+  background: url(mongo.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  max-width: 80px;
+  height: 90px;
+}
+
+.pic-7 {
+  background: url(c++.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.pic-8 {
+  background: url(node.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  max-width: 80px;
+  height: 90px;
+}
+
+.pic-9 {
+  background: url(html.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  max-width: 80px;
+  height: 90px;
+}
+
+.img-5 {
+  background: url(css.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  max-width: 80px;
+  height: 90px;
+}
+
+.pic-a {
+  background: url(figma.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  max-width: 80px;
+  height: 90px;
+}
+
+.img-6 {
+  background: url(powerbi.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  max-width: 80px;
+  height: 90px;
+}
+
+.img-7 {
+  background: url(Skills/arduino.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  max-width: 90px;
+  height: 90px;
+}
+
+/* Text below each icon */
+.text-d, .text-e, .text-f, .text-10, .text-11, .text-12, .text-13, .text-14, .text-15, .text-16, .text-17, .text-18, .text-19, .text-1a, .text-1b, .text-1c {
+  color: #4b5563;
+  font-family: var(--default-font-family);
+  font-size: clamp(0.8rem, 2vw, 1rem); /* Adjusts font size between 0.8rem and 1rem based on viewport */
+  width: 100%;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.2;
+  white-space: normal;
+}
+
+.box-9 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 0px;
+  position: relative;
+  width: 100%;
+  z-index: 70;
+}
+
+.text-1d {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-shrink: 0;
+  flex-basis: auto;
+  position: relative;
+  width: 100%;
+  height: 98px;
+  color: #1e1e1e;
+  font-family: var(--default-font-family);
+  font-size: 65px;
+  font-weight: 600;
+  line-height: 97.5px;
+  text-align: center;
+  white-space: nowrap;
+  letter-spacing: 1.95px;
+  z-index: 71;
+}
+
+.section-6 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 80vh;
+  gap: 10px;
+  box-sizing: border-box;
+  z-index: 72;
+}
+
+.pic-b {
+  flex: 0 0 40%; /* Sets width to 30% of the container */
+  height: auto; /* Height scales proportionally */
+  background: url(Companies/logo.png) no-repeat center;
+  background-size: contain; /* Ensures the entire image fits within */
+  aspect-ratio: 16 / 9; /* Adjusts to keep the aspect ratio */
+  border-radius: 10px;
+  z-index: 73;
+}
+
+.box-a {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  flex: 1 1 50%; /* Takes the remaining 70% of width */
+  padding: 20px ;
+  box-sizing: border-box;
+  z-index: 74;
+}
+
+/* Large Heading */
+.text-1e {
+  color: #875041;
+  font-family: var(--default-font-family);
+  font-size: 48px; /* Responsive font size based on viewport width */
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: right;
+  z-index: 75;
+}
+
+/* Subheading */
+.text-1f {
+  color: #000000;
+  font-family: var(--default-font-family);
+  font-size: 32px; /* Responsive font size */
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: right;
+  letter-spacing: 0.05em;
+  z-index: 76;
+}
+
+/* Paragraph */
+.text-20 {
+  color: #000000;
+  font-family: var(--default-font-family);
+  font-size: 20px; /* Responsive font size */
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: right;
+  z-index: 77;
+}
+
+.wrapper-5 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+  min-height: 80vh;
+  box-sizing: border-box;
+  z-index: 78;
+}
+
+.pic-c {
+  flex: 0 0 35%; /* Sets width to 30% of the container */
+  height: auto; /* Height scales proportionally */
+  background: url(Companies/C_Cubed_Aerospace.jpg) no-repeat center;
+  background-size: contain; /* Ensures the entire image fits within */
+  aspect-ratio: 1 / 1; /* Adjusts to keep the aspect ratio */
+  border-radius: 5px;
+  z-index: 73;
+}
+
+.box-b {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  flex: 1 1 50%; /* Takes the remaining 60% of width */
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 79;
+}
+
+/* Large Heading */
+.text-21 {
+  color: #875041;
+  font-family: var(--default-font-family);
+  font-size: 48px; /* Responsive font size based on viewport width */
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: left;
+  z-index: 80;
+}
+
+/* Subheading */
+.text-22 {
+  color: #000000;
+  font-family: var(--default-font-family);
+  font-size: 32px; /* Responsive font size */
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: left;
+  z-index: 81;
+}
+
+/* Paragraph */
+.text-23 {
+  color: #000000;
+  font-family: var(--default-font-family);
+  font-size: 20px; /* Responsive font size */
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  z-index: 82;
+}
+
+.wrapper-6 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 30px;
+  min-height: 80vh;
+  box-sizing: border-box;
+  z-index: 84;
+}
+
+.pic-d {
+  flex: 0 0 35%; /* Sets width to 40% of the container */
+  height: auto; /* Scales height proportionally */
+  background: url(Companies/UH.png) no-repeat center;
+  background-size: contain; /* Ensures the image fits */
+  aspect-ratio: 1 / 1; /* Maintains aspect ratio */
+  border-radius: 5px;
+  z-index: 85;
+}
+
+.box-c {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  flex: 1 1 40%; /* Takes remaining 60% of width */
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 86;
+}
+
+/* Large Heading */
+.text-24 {
+  color: #875041;
+  font-family: var(--default-font-family);
+  font-size: 48px; /* Responsive font size */
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: right;
+  z-index: 87;
+}
+
+/* Subheading */
+.text-25 {
+  color: #000000;
+  font-family: var(--default-font-family);
+  font-size: 32px; /* Responsive font size */
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: right;
+  letter-spacing: 0.05em;
+  z-index: 88;
+}
+
+/* Paragraph */
+.text-26 {
+  color: #000000;
+  font-family: var(--default-font-family);
+  font-size: 20px; /* Responsive font size */
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: right;
+  z-index: 89;
+}
+
+.wrapper-7 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 50px;
+  position: relative;
+  min-width: 0;
+  padding: 20px 0 20px 0;
+  z-index: 90;
+}
+.text-27 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-shrink: 0;
+  flex-basis: auto;
+  position: relative;
+  width: 1230px;
+  height: 98px;
+  color: #1e1e1e;
+  font-family: var(--default-font-family);
+  font-size: 65px;
+  font-weight: 600;
+  line-height: 97.5px;
+  text-align: center;
+  white-space: nowrap;
+  letter-spacing: 1.95px;
+  z-index: 91;
+}
+
+.wrapper-8 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centers content vertically */
+  gap: 11px;
+  width: 60vw; /* Sets width to 60% of viewport */
+  max-width: 713px; /* Prevents exceeding original width */
+  padding: 0 50px;
+  margin: 0 auto; /* Centers horizontally */
+}
+
+.text-28,
+.text-29,
+.text-2a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  font-family: sans-serif;
+  text-align: center;
+  width: 100%; /* Inherit 60vw from wrapper */
+  margin: 0 auto;
+}
+
+.text-28 {
+  color: #875041;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 72px;
+  letter-spacing: 1.44px;
+}
+
+.text-29 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 0.96px;
+}
+
+.text-2a {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.6px;
+  height: auto;
+}
+
+  
+.box-d {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centers content vertically */
+  gap: 11px;
+  width: 60vw; /* Sets width to 60% of viewport */
+  max-width: 713px; /* Prevents exceeding original width */
+  padding: 0 50px;
+  margin: 0 auto;
+}
+.text-2b {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  width: 1130px;
+  height: 144px;
+  color: #875041;
+  font-family: var(--default-font-family);
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 72px;
+  text-align: center;
+  text-overflow: initial;
+  letter-spacing: 1.44px;
+  z-index: 97;
+  overflow: hidden;
+}
+.text-2c {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-shrink: 0;
+  flex-basis: auto;
+  position: relative;
+  width: 273px;
+  height: 48px;
+  color: #000000;
+  font-family: var(--default-font-family);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 48px;
+  text-align: center;
+  white-space: nowrap;
+  letter-spacing: 0.96px;
+  z-index: 98;
+}
+.text-2d {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60vw;
+  height: 120px;
+  color: #000000;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.6px;
+  margin: 0 auto;
+}
+
+.text-2b,
+.text-2c,
+.text-2d {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  font-family: sans-serif;
+  text-align: center;
+  width: 100%; /* Inherit 60vw from wrapper */
+  margin: 0 auto;
+}
+
+.text-2b {
+  color: #875041;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 72px;
+  letter-spacing: 1.44px;
+}
+
+.text-2c {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 0.96px;
+}
+
+.text-2d {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.6px;
+  height: auto;
+}
+
+.section-7 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 20px;
+  position: relative;
+  min-width: 0;
+  z-index: 100;
+}
+.text-2e {
+  align-self: stretch;
+  flex-shrink: 0;
+  flex-basis: auto;
+  position: relative;
+  height: 98px;
+  color: #1e1e1e;
+  font-family: var(--default-font-family);
+  font-size: 65px;
+  font-weight: 600;
+  line-height: 97.5px;
+  text-align: center;
+  white-space: nowrap;
+  letter-spacing: 1.95px;
+  z-index: 101;
+}
+.wrapper-9 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  gap: 38px;
+  position: relative;
+  padding: 10px 0 10px 0;
+  z-index: 102;
+}
+.section-8 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 50px;
+  height: 656px;
+  position: relative;
+  width: fit-content;
+  padding: 50px 10px 50px 10px;
+  z-index: 103;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.section-8:hover {
+  transform: scale(1.05); /* Slight enlargement */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Adds shadow */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border highlight */
+  border-radius: 3%;
+}
+
+
+
+.img-8 {
+  flex-shrink: 0;
+  position: relative;
+  width: 420px;
+  height: 279.9px;
+  background: url(Projects/nlp_image.jpg)
+      no-repeat center;
+  background-size: cover;
+  z-index: 104;
+  border-radius: 20px;
+}
+.wrapper-a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 11px;
+  position: relative;
+  width: 100%;
+  z-index: 105;
+}
+.text-2f {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  width: 453px;
+  min-width: 0;
+  color: #875041;
+  font-family: var(--default-font-family);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 54px;
+  text-align: center;
+  letter-spacing: 1.08px;
+  z-index: 106;
+}
+.text-30 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  width: 453px;
+  min-width: 0;
+  height: 108px;
+  color: #000000;
+  font-family: var(--default-font-family);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: center;
+  letter-spacing: 0.54px;
+  z-index: 107;
+}
+.group-9 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 50px;
+  position: relative;
+  height: 656px;
+  width: 453px;
+  padding: 50px 10px;
+  z-index: 113;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.group-9:hover {
+  transform: scale(1.05); /* Slight enlargement */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Adds shadow */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border highlight */
+  border-radius: 3%;
+}
+
+.img-9 {
+  flex-shrink: 0;
+  position: relative;
+  width: 420px;
+  height: 230.237px;
+  background: url(Projects/finger_counter.png)
+      no-repeat center;
+  background-size: cover;
+  z-index: 114;
+  border-radius: 20px;
+}
+.box-e {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 11px;
+  position: relative;
+  width: 453px;
+  z-index: 115;
+}
+.text-31 {
+  align-self: stretch;
+  flex-shrink: 0;
+  flex-basis: auto;
+  position: relative;
+  min-width: 0;
+  height: 54px;
+  color: #875041;
+  font-family: var(--default-font-family);
+  font-size: 36px;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  letter-spacing: 1.08px;
+  z-index: 116;
+}
+.text-32 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  width: 453px;
+  min-width: 0;
+  height: 108px;
+  color: #000000;
+  font-family: var(--default-font-family);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: center;
+  letter-spacing: 0.54px;
+  z-index: 117;
+}
+.group-a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  height: 537px;
+  gap: 50px;
+  position: relative;
+  width: 453px;
+  padding: 50px 10px;
+  z-index: 123;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.group-a:hover {
+  transform: scale(1.05); /* Slight enlargement */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Adds shadow */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border highlight */
+  border-radius: 3%;
+}
+
+.pic-e {
+  flex-shrink: 0;
+  position: relative;
+  width: 420px;
+  height: 200.933px;
+  background: url(Projects/portfolio.png)
+      no-repeat center;
+  background-size: cover;
+  z-index: 124;
+  border-radius: 20px;
+}
+.wrapper-b {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 11px;
+  position: relative;
+  width: 100%;
+  z-index: 125;
+}
+.text-33 {
+  align-self: stretch;
+  flex-shrink: 0;
+  flex-basis: auto;
+  position: relative;
+  width: 100%;
+  height: 54px;
+  color: #875041;
+  font-family: var(--default-font-family);
+  font-size: 36px;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  letter-spacing: 1.08px;
+  z-index: 126;
+}
+
+.text-34 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%; /* Ensures it respects the container width */
+  height: auto; /* Adjusts height to fit content */
+  color: #000000;
+  font-family: var(--default-font-family);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: center;
+  letter-spacing: 0.54px;
+  box-sizing: border-box; /* Includes padding in height/width calculations */
+  overflow: hidden; /* Prevents overflow */
+  z-index: 107;
+}
+
+.group-b {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 50px;
+  position: relative;
+  height: 537px;
+  width: 453px;
+  padding: 50px 10px;
+  z-index: 108;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.group-b:hover {
+  transform: scale(1.05); /* Slight enlargement */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Adds shadow */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border highlight */
+  border-radius: 3%;
+}
+
+
+.img-a {
+  flex-shrink: 0;
+  position: relative;
+  width: 420px;
+  height: 187.031px;
+  background: url(Projects/food_img.png)
+      no-repeat center;
+  background-size: cover;
+  z-index: 109;
+  border-radius: 20px;
+}
+.box-f {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 11px;
+  position: relative;
+  width: 100%;
+  z-index: 110;
+}
+.text-35 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+
+  min-width: 0;
+  color: #875041;
+  font-family: var(--default-font-family);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 54px;
+  text-align: center;
+  letter-spacing: 1.08px;
+  z-index: 111;
+}
+.text-36 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  min-width: 0;
+  height: 81px;
+  color: #000000;
+  font-family: var(--default-font-family);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: center;
+  letter-spacing: 0.54px;
+  z-index: 112;
+}
+.box-10 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 50px;
+  position: relative;
+  width: 453px;
+  height: fit-content;
+  padding: 50px 10px;
+  z-index: 118;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.box-10:hover {
+  transform: scale(1.05); /* Slight enlargement */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Adds shadow */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border highlight */
+  border-radius: 3%;
+}
+
+
+.pic-f {
+  flex-shrink: 0;
+  position: relative;
+  width: 420px;
+  height: 233.955px;
+  background: url(Projects/movie_website.png)
+      no-repeat center;
+  background-size: cover;
+  z-index: 119;
+  border-radius: 20px;
+}
+.wrapper-c {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 11px;
+  position: relative;
+  width: 100%;
+  z-index: 120;
+}
+.text-37 {
+  align-self: stretch;
+  flex-shrink: 0;
+  flex-basis: auto;
+  position: relative;
+  min-width: 0;
+  height: 54px;
+  color: #875041;
+  font-family: var(--default-font-family);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 54px;
+  text-align: center;
+  white-space: nowrap;
+  letter-spacing: 1.08px;
+  z-index: 121;
+}
+.text-38 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  min-width: 0;
+  color: #000000;
+  font-family: var(--default-font-family);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: center;
+  letter-spacing: 0.54px;
+  z-index: 122;
+}
+.box-11 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 33px;
+  position: relative;
+  min-width: 0;
+  padding: 0 260px 0 260px;
+  z-index: 128;
+}
+.text-39 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-shrink: 0;
+  flex-basis: auto;
+  position: relative;
+  width: 427px;
+  height: 96px;
+  color: #000000;
+  font-family: var(--default-font-family);
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 96px;
+  text-align: center;
+  white-space: nowrap;
+  letter-spacing: 1.92px;
+  z-index: 129;
+}
+.section-9 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 10px;
+  position: relative;
+  width: 402px;
+  z-index: 130;
+}
+
+.img-b {
+  flex-shrink: 0;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: url(Contact/gmail.png)
+      no-repeat center;
+  background-size: cover;
+  z-index: 131;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.img-b:hover {
+  transform: scale(1.25); /* Slight enlargement */
+}
+
+.text-3a {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-shrink: 0;
+  flex-basis: auto;
+  position: relative;
+  width: 352px;
+  height: 36px;
+  color: #000000;
+  font-family: var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+  text-align: center;
+  white-space: nowrap;
+  letter-spacing: 0.72px;
+  z-index: 132;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.text-3a:hover {
+  transform: scale(1.05); /* Slight enlargement */
+}
+
+
+.section-a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 100px;
+  position: relative;
+  z-index: 133;
+}
+
+.img-c {
+  flex-shrink: 0;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: url(Contact/LinkedIn.png)
+      no-repeat center;
+  background-size: cover;
+  z-index: 134;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.img-c:hover {
+  transform: scale(1.25); /* Slight enlargement */
+}
+
+.img-d {
+  flex-shrink: 0;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: url(Contact/github.png)
+      no-repeat center;
+  background-size: cover;
+  z-index: 135;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.img-d:hover {
+  transform: scale(1.25); /* Slight enlargement */
+}
+
+
+.pic-10 {
+  flex-shrink: 0;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: url(Contact/Insta.png)
+      no-repeat center;
+  background-size: cover;
+  z-index: 136;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.pic-10:hover {
+  transform: scale(1.25); /* Slight enlargement */
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Optimized for spacing */
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px; /* Padding for layout balance */
+    background: #fdede1;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.section {
+  display: none; /* Hide .section navbar on mobile */
+}
+
+.navbar{
+  display: block;
+}
+
+.hamburger {
+  display: block; /* Display hamburger on mobile */
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1001;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  z-index: 1001;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.menu-content span {
+  cursor: pointer;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.menu-content span:hover {
+  color: #ff8c00; /* Highlight color on hover */
+}
+
+
+
+
+/* Group container */
+.group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 30px;
+  max-width: 100%;
+  padding: 0 16px; /* Added padding to prevent content from touching edges */
+  box-sizing: border-box;
+}
+
+/* Wrapper for padding consistency */
+.wrapper {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main heading text for mobile */
+.text-7 {
+  color: #000;
+  font-family: sans-serif;
+  font-size: 36px; /* Adjusted for mobile readability */
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Secondary text for mobile */
+.text-8 {
+  color: #000;
+  font-family: DM Sans, sans-serif;
+  text-align: center;
+  font-size: 20px; /* Reduced size for mobile readability */
+  font-weight: 400;
+  line-height: 1.4;
+  width: 100%; /* Ensures text fits well on smaller screens */
+}
+
+/* Box styling for mobile */
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  padding: 12px 16px; /* Compact padding for mobile */
+  background: #875041;
+  border-radius: 20px;
+}
+
+/* Box text for mobile */
+.text-9 {
+  color: #fdede1;
+  font-family: sans-serif;
+  font-size: 16px; /* Reduced slightly for mobile fit */
+  line-height: 1.2;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+/* Group-2 with inset shadow */
+.group-2 {
+  display: flex;
+  align-items: center;  
+  width: 100%; /* Full width for mobile */
+  max-width: 320px; /* Limit width to fit within mobile screens */
+  padding: 6px;
+  background: #fdede1;
+  border-radius: 245px;
+  box-shadow: inset 6px 6px 6px 6px rgba(209, 132, 15, 0.47);
+  box-sizing: border-box;
+  overflow: hidden; /* Ensures no content overflow */
+}
+
+/* Image container */
+.pic {
+  width: 100%; /* Full width for responsiveness */
+  max-width: 320px; /* Limit image size for mobile */
+  height: auto;
+  aspect-ratio: 1; /* Ensures image maintains square aspect ratio */
+  background: url(Red\ Labs\ Headshots\ 23-modified\ \(1\).png) no-repeat center;
+  background-size: cover;
+  border-radius: 50%; /* Circular image styling */
+  overflow: hidden; /* Prevents overflow */
+}
+.group-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 100vh;
+  padding: 0 16px;
+  position: relative;
+  z-index: 15;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Name text styling (similar to .text-7) */
+.text-a {
+  color: #000;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  width: 100%;
+  letter-spacing: 1.92px;
+  position: relative;
+  z-index: 16;
+}
+
+/* Secondary text styling (similar to .text-8) */
+.text-b {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+  max-width: 320px; /* Ensures content stays centered on small screens */
+  color: #000;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: center;
+  letter-spacing: 0.84px;
+  position: relative;
+  z-index: 17;
+  margin: 0 auto; /* Centers text container */
+}
+
+/* Main container for two-column grid on mobile */
+.group-4 {
+  display: flex;
+  gap: 16px;
+  padding: 100px 16px;
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+  justify-items: center;
+}
+
+/* Inner container grids (like .group-5 and .box-4) */
+.group-5 {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+/* Header styling */
+.text-c {
+  color: #000;
+  font-family: sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  grid-column: span 2; /* Span across both columns */
+  margin-bottom: 16px;
+}
+
+/* Each individual skill block */
+.group-6, .section-2, .section-3, .box-2, .box-3, .group-7, .wrapper-2, .group-8,
+.wrapper-3, .box-5, .box-6, .section-4, .wrapper-4, .box-7, .section-5, .box-8 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  width: 30%;
+}
+
+
+/* Text below each icon */
+.text-d, .text-e, .text-f, .text-10, .text-11, .text-12, .text-13, .text-14,
+.text-15, .text-16, .text-17, .text-18, .text-19, .text-1a, .text-1b, .text-1c {
+  color: #4b5563;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 4px;
+}
+
+/* Main container for experiences */
+.box-9 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Heading */
+.text-1d {
+  color: #1e1e1e;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 1px;
+  white-space: normal;
+}
+
+/* Individual experience section */
+.section-6, .wrapper-5 {
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  margin-top: 0px;
+  margin-bottom: 20vh;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.wrapper-6 {
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  margin-top: 0px;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Picture styling to ensure full image visibility */
+.pic-b, .pic-c, .pic-d {
+  width: 100%;
+  max-width: 320px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+}
+
+/* Box for text content below each picture */
+.box-a, .box-b, .box-c {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+  min-height: 20vh;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0; /* Ensures text content is centered */
+}
+
+/* Experience title */
+.text-1e, .text-21, .text-24 {
+  color: #875041;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  width: auto;
+  text-align: center;
+  justify-content: center;
+  letter-spacing: 0.5px;
+  white-space: normal;
+}
+
+/* Position title */
+.text-1f, .text-22, .text-25 {
+  color: #000000;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.5px;
+  white-space: normal;
+}
+
+/* Description text */
+.text-20, .text-23, .text-26 {
+  color: #000000;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  padding-top: 8px;
+  width: 100%;
+  letter-spacing: 0.5px;
+  white-space: normal;
+}
+
+
+/* Wrapper for main container */
+.wrapper-7 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 50px 0 100px 0;
+  gap: 20px;
+  box-sizing: border-box;
+  z-index: 91;
+}
+
+/* Main Heading Text */
+.text-27 {
+  width: 100%;
+  color: #1e1e1e;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 1.95px;
+  z-index: 92;
+  white-space: nowrap;
+}
+
+/* Inner wrapper for section content */
+.wrapper-8 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 11px;
+  padding: 0 16px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 93;
+}
+
+/* Subheading Text */
+.text-28, .text-2b {
+  color: #875041;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.96px;
+  z-index: 95;
+  white-space: nowrap;
+}
+
+
+/* Smaller Subheading Text */
+.text-29, .text-2c {
+  color: #000000;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.96px;
+  z-index: 95;
+  white-space: nowrap;
+}
+
+/* Body Text */
+.text-2a, .text-2d {
+  color: #000000;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  width: 100%;
+  letter-spacing: 0.6px;
+  z-index: 96;
+  white-space: normal;
+}
+
+/* Box container for text content */
+.box-d {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 11px;
+  padding: 0 16px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 97;
+}
+
+/* Main Section Wrapper */
+.section-7 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 0 16px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 101;
+}
+
+/* Title Text */
+.text-2e {
+  width: 100%;
+  max-width: 100%; /* Ensures full width on smaller screens */
+  color: #1e1e1e;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 1.95px;
+  z-index: 102;
+  white-space: normal; /* Allows text to wrap */
+  margin: 0 auto;
+}
+
+/* Inner Wrapper */
+.wrapper-9, .wrapper-a, .wrapper-b, .wrapper-c {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+  padding: 10px 0;
+  width: 100%;
+  max-width: 420px; /* Limits width on smaller screens */
+  box-sizing: border-box;
+  margin: 0 auto; /* Center-aligns the wrappers */
+}
+
+/* Section Wrapper for Consistent Padding */
+.section-8, .group-9, .group-a, .group-b, .box-10 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+  max-width: 420px; /* Limits width for sections */
+  padding: 50px 0;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+/* Image Styling */
+.img-8, .img-9, .pic-e, .img-a, .pic-f {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  aspect-ratio: 16 / 9; /* Maintains aspect ratio for responsive scaling */
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  margin: 0 auto; /* Center-aligns images */
+}
+
+/* Project Title */
+.text-2f, .text-31, .text-33, .text-35, .text-37 {
+  width: 100%;
+  color: #875041;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 1.08px;
+  white-space: normal; /* Allows text to wrap */
+  margin: 0 auto;
+}
+
+/* Description Title */
+.text-30, .text-32, .text-34, .text-36, .text-38 {
+  color: #000000;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  height: fit-content;
+  width: 100%;
+  max-width: 420px; /* Ensures text stays within the viewport */
+  letter-spacing: 0.54px;
+  white-space: normal; /* Ensures text wraps on smaller screens */
+  margin: 0 auto;
+  padding: 0 10px; /* Adds padding to avoid touching screen edges */
+}
+
+/* Main container for contact section */
+.box-11 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 33px;
+  width: 100%;
+  padding: 0 16px; /* Adjusted padding for mobile */
+  box-sizing: border-box;
+  z-index: 129;
+}
+
+/* Title text */
+.text-39 {
+  color: #000000;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 32px; /* Adjusted for readability on mobile */
+  font-weight: 600;
+  line-height: 1.2;
+  height: max-content;
+  text-align: center;
+  letter-spacing: 1.92px;
+  white-space: normal; /* Allows wrapping on smaller screens */
+  width: 100%;
+  max-width: 100%;
+  z-index: 130;
+  margin: 0 auto;
+}
+
+/* Contact info container */
+.section-9 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap; /* Allows items to wrap on small screens */
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  z-index: 131;
+}
+
+/* Icon styling */
+.img-b, .img-c, .img-d, .pic-10 {
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%; /* Ensures round icons */
+  z-index: 132;
+}
+
+/* Text styling for contact info */
+.text-3a {
+  color: #000000;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px; /* Adjusted for readability on mobile */
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.72px;
+  white-space: normal; /* Allows text to wrap */
+  width: 100%;
+  max-width: 350px;
+  z-index: 133;
+  margin: 0 auto;
+}
+
+/* Social media icons container */
+.section-a {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Reduced gap for mobile view */
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  z-index: 134;
+  padding: 10px 0;
+}
+
+}

@@ -108,22 +108,32 @@ const Hero = () => {
                     </motion.p>
 
                     <motion.div variants={itemVariants} style={{ display: 'flex', gap: '20px' }}>
-                        <a href="#contact" className="btn-primary" style={{
-                            background: 'var(--color-primary)',
-                            color: 'white',
-                            padding: '15px 30px',
-                            borderRadius: '30px',
-                            fontWeight: 'bold',
-                            fontSize: '1.1rem',
-                            border: '2px solid var(--color-primary)',
-                            transition: 'all 0.3s ease',
-                            cursor: 'pointer',
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '10px'
-                        }}>
+                        <motion.a 
+                            href="#contact" 
+                            className="btn-primary" 
+                            whileHover={{ 
+                                scale: 1.05, 
+                                boxShadow: '0 0 20px rgba(135, 80, 65, 0.6)',
+                                backgroundColor: 'transparent',
+                                color: 'var(--color-primary)'
+                            }}
+                            whileTap={{ scale: 0.95 }}
+                            style={{
+                                background: 'var(--color-primary)',
+                                color: 'white',
+                                padding: '15px 30px',
+                                borderRadius: '30px',
+                                fontWeight: 'bold',
+                                fontSize: '1.1rem',
+                                border: '2px solid var(--color-primary)',
+                                cursor: 'pointer',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '10px'
+                            }}
+                        >
                             Initialize Protocol <span className="mono">-&gt;</span>
-                        </a>
+                        </motion.a>
                         
                         <div style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
                             <SocialIcon href="https://github.com/sunaypanda" icon={<FaGithub />} />

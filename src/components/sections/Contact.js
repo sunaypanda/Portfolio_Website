@@ -26,22 +26,35 @@ const Contact = () => {
                         Whether you want to discuss robotics, AI, or potential collaborations, my inbox is always open.
                     </p>
 
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sunaypanda12@gmail.com" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{
-                        background: 'var(--color-primary)',
-                        color: 'white',
-                        padding: '18px 40px',
-                        borderRadius: '40px',
-                        fontSize: '1.2rem',
-                        fontWeight: 'bold',
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '10px',
-                        marginBottom: '40px',
-                        boxShadow: '0 10px 20px rgba(135, 80, 65, 0.3)',
-                        transition: 'transform 0.3s ease'
-                    }}>
+                    <motion.a 
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=sunaypanda12@gmail.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="btn-primary"
+                        whileHover={{ 
+                            scale: 1.1, 
+                            boxShadow: '0 0 25px rgba(135, 80, 65, 0.8)',
+                            backgroundColor: 'transparent',
+                            color: 'var(--color-primary)'
+                        }}
+                        whileTap={{ scale: 0.95 }} 
+                        style={{
+                            background: 'var(--color-primary)',
+                            color: 'white',
+                            padding: '18px 40px',
+                            borderRadius: '40px',
+                            fontSize: '1.2rem',
+                            fontWeight: 'bold',
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: '10px',
+                            marginBottom: '40px',
+                            boxShadow: '0 10px 20px rgba(135, 80, 65, 0.3)',
+                            border: '2px solid var(--color-primary)'
+                        }}
+                    >
                         <FaPaperPlane /> Say Hello
-                    </a>
+                    </motion.a>
 
                     <div style={{ display: 'flex', justifyContent: 'center', gap: '30px' }}>
                         <SocialLink href="https://www.linkedin.com/in/sunay-panda/" icon={<FaLinkedin />} label="LinkedIn" />

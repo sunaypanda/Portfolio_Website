@@ -7,12 +7,18 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "classnames": "^2.5.1",
+<<<<<<< HEAD
     "framer-motion": "^12.34.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.5.0",
     "react-scripts": "5.0.1",
     "react-type-animation": "^3.2.0",
+=======
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "5.0.1",
+>>>>>>> bf6f8522f9840aa59014be2f88c07c4d26c7d69c
     "web-vitals": "^2.1.4"
   },
   "scripts": {

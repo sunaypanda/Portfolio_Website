@@ -29,7 +29,7 @@ const Skills = () => {
                         marginBottom: '1rem', 
                         color: 'var(--color-text)' 
                     }}>
-                        <span className="mono" style={{ color: 'var(--color-accent)', fontSize: '1.5rem', display: 'block', marginBottom: '10px' }}>// SYSTEM_MODULES</span>
+                        <span className="mono" style={{ color: 'var(--color-accent)', fontSize: '1.5rem', display: 'block', marginBottom: '10px' }}>{'// SYSTEM_MODULES'}</span>
                         Technical Arsenal
                     </h2>
                 </motion.div>

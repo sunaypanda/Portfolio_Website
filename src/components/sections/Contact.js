@@ -26,7 +26,7 @@ const Contact = () => {
                         Whether you want to discuss robotics, AI, or potential collaborations, my inbox is always open.
                     </p>
 
-                    <a href="mailto:sunaypanda12@gmail.com" className="btn-primary" style={{
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sunaypanda12@gmail.com" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{
                         background: 'var(--color-primary)',
                         color: 'white',
                         padding: '18px 40px',
